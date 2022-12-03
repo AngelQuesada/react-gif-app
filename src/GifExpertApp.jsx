@@ -18,25 +18,24 @@ const GifExpertApp = () => {
 
     return ( 
         <>
-            {/* Titulo */}
-            <h1>Gif Expert APP</h1>
-            
             {/* Input */}
             <AddCategory 
                 onNewCategory={ value => onAddCategory(value)}
             />
 
             {/* Listado de gifs */}
-            <button onClick={onAddCategory}>Añadir</button>
+            <div class="d-grid gap-2 col-6 mx-auto">
+                <button className='btn btn-info mt-3' onClick={onAddCategory}>Añadir</button>
+            </div>
 
-                {
-                    categories.map( (category) => {
-                        return <GifGrid 
-                            category={ category }
-                            key={ category }
-                        />
-                    })
-                }
+            {
+                categories.map( (category) => {
+                    return <GifGrid 
+                        category={ category }
+                        key={ category }
+                    />
+                })
+            }
         </>
      );
 }

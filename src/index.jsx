@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 
 import GifExpertApp from "./GifExpertApp";
 
-import './styles/main.css';
+import './scss/main.scss';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>

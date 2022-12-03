@@ -24,10 +24,6 @@ const GifExpertApp = () => {
             />
 
             {/* Listado de gifs */}
-            <div class="d-grid gap-2 col-6 mx-auto">
-                <button className='btn btn-info mt-3' onClick={onAddCategory}>Añadir</button>
-            </div>
-
             {
                 categories.map( (category) => {
                     return <GifGrid 

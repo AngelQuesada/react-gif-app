@@ -9,21 +9,19 @@ const GifGrid = ({ category }) => {
     const { images, isLoading } = useFetchGifs( category );
 
     return ( 
-        <div className='mt-5'>
+        <div className='container mt-5'>
             <hr />
             <h3>{ category }</h3>
             {
                 isLoading && (<h2>Cargando...</h2>)
             }
 
-            <div className='container'>
-                <div className='row'>
-                    {
-                        images.map( image => {
-                            return <GifItem key={image.id} image={image}/>
-                        })
-                    }
-                </div>
+            <div className='row'>
+                {
+                    images.map( image => {
+                        return <GifItem key={image.id} image={image}/>
+                    })
+                }
             </div>
         </div>
      );

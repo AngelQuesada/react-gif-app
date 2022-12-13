@@ -4,6 +4,9 @@ import GifItem from './GifItem';
 // Hooks
 import { useFetchGifs } from '../hooks/useFetchGifs';
 
+// Others
+import PropTypes from 'prop-types';
+
 const GifGrid = ({ category }) => {
 
     const { images, isLoading } = useFetchGifs( category );
@@ -19,12 +22,21 @@ const GifGrid = ({ category }) => {
             <div className='row'>
                 {
                     images.map( image => {
-                        return <GifItem key={image.id} image={image}/>
+                        return <GifItem 
+                            key={image.id} 
+                            url={image.url}
+                            title={image.title}
+                        />
                     })
                 }
             </div>
         </div>
      );
 }
+
+GifGrid.propTypes = {
+    category:PropTypes.string.isRequired
+}
+
  
 export default GifGrid;

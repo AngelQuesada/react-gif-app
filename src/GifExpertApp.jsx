@@ -19,11 +19,11 @@ const GifExpertApp = () => {
 
     return ( 
         <div className='container'>  
-            <h1> Cheese Gif App </h1>
+            <h1>Cheese Gif App</h1>
 
             {/* Input */}
             <AddCategory 
-                onNewCategory={ value => onAddCategory(value)}
+                onNewCategory={ value => onAddCategory(value) }
             />
 
             {/* Listado de gifs */}

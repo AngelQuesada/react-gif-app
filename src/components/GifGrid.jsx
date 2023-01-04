@@ -1,5 +1,5 @@
 // Components
-import GifItem from './GifItem';
+import { GifItem } from './GifItem';
 
 // Hooks
 import { useFetchGifs } from '../hooks/useFetchGifs';
@@ -7,7 +7,7 @@ import { useFetchGifs } from '../hooks/useFetchGifs';
 // Others
 import PropTypes from 'prop-types';
 
-const GifGrid = ({ category }) => {
+export const GifGrid = ({ category }) => {
 
     const { images, isLoading } = useFetchGifs( category );
 
@@ -37,6 +37,3 @@ const GifGrid = ({ category }) => {
 GifGrid.propTypes = {
     category:PropTypes.string.isRequired
 }
-
- 
-export default GifGrid;

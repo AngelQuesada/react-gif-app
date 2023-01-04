@@ -2,14 +2,24 @@ import { useState } from "react";
 
 import PropTypes from 'prop-types';
 
-const AddCategory = ({ onNewCategory }) => {
+export const AddCategory = ({ onNewCategory }) => {
 
     const [inputValue, setInputValue] = useState();
 
+    /**
+     * Set the input value to the input state of the component
+     * @param {Object} target (deconstructed from event) 
+     */
     const onInputChange = ({target}) => {
         setInputValue(target.value);
     }
 
+    /**
+     * Adds the new category throw the function @onNewCategory
+     * Sets the state value (inputValue) to an empty string
+     * @param {Event} event 
+     * @returns 
+     */
     const onSubmit = ( event ) => {
         event.preventDefault();
 
@@ -41,5 +51,3 @@ const AddCategory = ({ onNewCategory }) => {
 AddCategory.propTypes = {
     onNewCategory:PropTypes.func.isRequired
 }
- 
-export default AddCategory;

@@ -2,14 +2,19 @@
 import { useState } from "react";
 
 // Components
-import AddCategory from "./components/AddCategory";
-import GifGrid from "./components/GifGrid";
+import { AddCategory } from "./components/AddCategory";
+import { GifGrid } from "./components/GifGrid";
 
 const GifExpertApp = () => {
     const animes = ['Cheese'];
 
     const [categories, setCategories] = useState(animes)
 
+    /**
+     * Checks if the category already exists
+     * Add the category to the component state
+     * @param {String} newCategory 
+     */
     const onAddCategory = ( newCategory ) => {
 
         if (categories.includes( newCategory )) return;
